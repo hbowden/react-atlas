@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { classNames } from '../utils';
 import prefixer from '../utils/prefixer';
@@ -48,7 +50,7 @@ class ProgressBar extends React.Component {
   }
   renderRange (theme) {
      let rangeStyle = prefixer({
-       transform: `translateX(${this.calculateRatio(this.props.value.from) * 100}%) 
+       transform: `translateX(${this.calculateRatio(this.props.value.from) * 100}%)
                    scaleX(${this.calculateRatio(this.props.value.to - this.props.value.from)})`
      });
      return (

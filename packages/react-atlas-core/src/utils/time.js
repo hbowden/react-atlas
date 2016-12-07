@@ -1,3 +1,5 @@
+// @flow
+
 export default {
   getDaysInMonth (d) {
     const resultDate = this.getFirstDayOfMonth(d);

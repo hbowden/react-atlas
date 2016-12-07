@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component, PropTypes } from 'react';
 import themeable from 'react-themeable';
 import classNames from 'classnames/bind';
@@ -78,7 +80,7 @@ class TabsExample extends React.Component {
 }
 
 ReactDOM.render(<TabsExample />, mountNode);
-// } 
+// }
 `
 };
 

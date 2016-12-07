@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes } from 'react';
 
 const Thead = ({children, ...props}) => (

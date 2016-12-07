@@ -1,3 +1,5 @@
+// @flow
+
 const WEBKIT = 'Webkit';
 const MICROSOFT = 'Ms';
 

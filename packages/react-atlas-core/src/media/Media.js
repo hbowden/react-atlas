@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes, Component } from 'react';
 import { classNames } from '../utils';
 import themeable from 'react-themeable';

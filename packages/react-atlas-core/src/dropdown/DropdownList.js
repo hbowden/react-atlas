@@ -1,3 +1,5 @@
+// @flow
+
 /*
 Dropdown inspired and mostly taken from:
 react-simple-dropdown

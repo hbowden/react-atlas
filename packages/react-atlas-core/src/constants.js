@@ -1,3 +1,5 @@
+// @flow
+
 /** constants.js taken from Elemental UI.
  * mainly used for Grid functionality, Col & Row components
  * Copyright (c) 2016 Thinkmill Pty Ltd

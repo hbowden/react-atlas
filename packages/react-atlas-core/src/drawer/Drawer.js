@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import ClassNames from 'classnames';
 import Overlay from '../overlay';

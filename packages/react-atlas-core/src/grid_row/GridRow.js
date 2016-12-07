@@ -1,3 +1,5 @@
+// @flow
+
 /** GridRow.js mostly taken and inspired from Elemental UI.
  * used for Grid functionality
  * Copyright (c) 2016 Thinkmill Pty Ltd

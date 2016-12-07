@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component, PropTypes } from 'react';
 import Radio from './Radio';
 import themeable from 'react-themeable';

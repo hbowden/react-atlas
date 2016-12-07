@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes } from 'react';
 
 /**
@@ -47,7 +49,7 @@ class FormExample extends React.Component {
     );
   }
 }
-ReactDOM.render(<FormExample/>, mountNode); 
+ReactDOM.render(<FormExample/>, mountNode);
 `
 };
 

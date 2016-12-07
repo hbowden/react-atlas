@@ -1,3 +1,4 @@
+// @flow
 /** Our Autocomplete component is a simple wrapper around react-autosuggest.
  * Copyright � 2016 Misha Moroshko
  * Read https://github.com/moroshko/react-autosuggest for documentation
@@ -151,18 +152,18 @@ var languages = [
 // }
 // internal component methods {
 var AutoCompleteExample = React.createClass({
-  
+
   getInitialState: function() {
-    return ({ 
-      value: '', 
+    return ({
+      value: '',
       suggestions: this.getSuggestions('')
     });
   },
-  
+
   escapeRegexCharacters: function(str) {
     return str.replace(/[.*+?^{}()|[\]\\]/g, "\\$&");
   },
-  
+
   getSuggestions: function (value) {
     const escapedValue = this.escapeRegexCharacters(value.trim());
 

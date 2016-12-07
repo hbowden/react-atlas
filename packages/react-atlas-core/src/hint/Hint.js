@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import themeable from 'react-themeable';
 
@@ -19,7 +21,7 @@ Hint.styleguide = {
   <p>Here is some regular text. <Hint>Some Hint text</Hint></p>
   <Input label="Here is a Label" placeholder="Placeholder Text" />
   <Hint>some Hint text below the input</Hint>
-</div>  
+</div>
 `
 };
 

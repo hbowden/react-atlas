@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes } from 'react';
 import themeable from 'react-themeable';
 
@@ -84,7 +86,7 @@ Button.styleguide = {
     <Button disabled warning outline>Warning</Button>
     <Button disabled danger outline>Danger</Button>
     <Button href="#" disabled link outline>Link</Button>
-    
+
     <h2>Styled with wrapper components</h2>
     <p>Regular Buttons</p>
     <PrimaryButton>Button</PrimaryButton>

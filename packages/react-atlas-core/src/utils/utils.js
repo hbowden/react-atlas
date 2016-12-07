@@ -1,3 +1,5 @@
+// @flow
+
 export default {
   angleFromPositions (cx, cy, ex, ey) {
     const theta = Math.atan2(ey - cy, ex - cx) + Math.PI / 2;

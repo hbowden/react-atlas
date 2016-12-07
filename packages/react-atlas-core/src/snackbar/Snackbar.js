@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component, PropTypes } from 'react';
 import themeable from 'react-themeable';
 import Overlay from '../overlay';

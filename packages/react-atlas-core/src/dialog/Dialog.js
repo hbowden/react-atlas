@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes } from 'react';
 import ClassNames from "classnames";
 import Overlay from "../overlay";
@@ -96,4 +98,3 @@ ReactDOM.render(<App/>, mountNode);
 };
 
 export default Dialog;
-
