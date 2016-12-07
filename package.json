@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
+    "flow": "flow check",
     "docs": "cross-env NODE_ENV=development rcs \"./packages/react-atlas-core/src/**/*.js\" -s \"./packages/react-atlas-default-theme/src/**/*.js\" -v -c ./docsConfig.js -d",
     "lerna:init": "lerna init",
     "lerna:bootstrap": "lerna bootstrap",
@@ -62,6 +63,7 @@
     "expect": "^1.19.0",
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
+    "flow-bin": "^0.36.0",
     "gh-pages": "^0.11.0",
     "glob": "^7.0.3",
     "jest": "^17.0.3",
