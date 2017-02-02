@@ -39,7 +39,7 @@ class Tabs extends Component {
 
     return (
       <div {...theme(1, ...classes)}>
-        <nav {...theme(2, 'navigation')} ref="navigation">
+        <nav {...theme(2, 'navigation')}>
           {headers.map((item, idx) => {
             return <Tab {...item.props} key={idx} active={this.props.index === idx} onClick={this._handleHeaderClick.bind(this, idx)} theme={this.props.theme} />
           })}
@@ -60,7 +60,10 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
-  index: 0
+  index: 0,
+  theme: {
+    container: true
+  }
 };
 
 Tabs.styleguide = {

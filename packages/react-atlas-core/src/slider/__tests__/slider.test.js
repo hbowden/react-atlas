@@ -5,7 +5,7 @@ import Slider from '../../slider'
 
 describe('Test slider component', () => {
   it('Test default props', function() {
-    const result = mount(<Slider></Slider>);
+    const result = mount(<Slider editable></Slider>);
 
   });
 });

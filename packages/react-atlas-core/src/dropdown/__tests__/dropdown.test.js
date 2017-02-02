@@ -57,16 +57,16 @@ describe('Testing Dropdown component', () => {
     expect(result.state().active).to.equal(false);
   });
 
-  it("Make sure onHide is called when it is set and a click event happens and active is set", function() {
-    const result = shallow(<Dropdown active={true} onHide={onHideTestHandler}></Dropdown>);
-    result.simulate('click');
-    expect(count).to.equal(1);
-  });
-
   it("Make sure onHide is not called when it is set and a click event happens and active is not set", function() {
     const result = shallow(<Dropdown onHide={onHideTestHandler}></Dropdown>);
     result.simulate('click');
     expect(count).to.equal(0);
+  });
+
+  it("Make sure onHide is called when it is set and a click event happens and active is set", function() {
+    const result = shallow(<Dropdown active={true} onHide={onHideTestHandler}></Dropdown>);
+    result.simulate('click');
+    expect(count).to.equal(1);
   });
 
   it('Check show() function', function() {

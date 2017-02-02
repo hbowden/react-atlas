@@ -41,18 +41,18 @@ class ProgressBar extends React.Component {
     const {buffer, value} = this.linearStyle();
     return (
       <div>
-        <span ref="buffer" data-ref="buffer" {...theme(3, 'buffer')} style={buffer}></span>
-        <span ref="value" data-ref="value" {...theme(4, 'value')} style={value}></span>
+        <span {...theme(3, 'buffer')} style={buffer}></span>
+        <span {...theme(4, 'value')} style={value}></span>
       </div>
     );
   }
   renderRange (theme) {
      let rangeStyle = prefixer({
-       transform: `translateX(${this.calculateRatio(this.props.value.from) * 100}%) 
+       transform: `translateX(${this.calculateRatio(this.props.value.from) * 100}%)
                    scaleX(${this.calculateRatio(this.props.value.to - this.props.value.from)})`
      });
      return (
-         <span ref='value' data-ref='value' {...theme(5, 'value')} style={rangeStyle}></span>
+         <span {...theme(5, 'value')} style={rangeStyle}></span>
      );
    }
 
@@ -112,7 +112,10 @@ ProgressBar.defaultProps = {
   mode: 'indeterminate',
   multicolor: false,
   type: 'linear',
-  value: 0
+  value: 0,
+  theme: {
+    'linear': true
+  }
 };
 
 ProgressBar.styleguide = {

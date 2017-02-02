@@ -49,4 +49,8 @@ describe('Testing Avatar component', () => {
     let child = result.children().at(0);
     expect(child.text()).to.equal(title[0]);
   });
+
+  it('Make sure a span is returned when only one child is passed', function() {
+    const result = mount(<Avatar><i className="fa fa-github"></i></Avatar>);
+  });
 });

@@ -241,9 +241,7 @@ class Slider extends Component {
       const className = classNames('innerknob', {
          pressed: knobValue !== this.state.otherKnobValue
       });
-      const ref = isLast ? "knob" : "knobFrom";
       return (<div
-             ref={ref}
              {...theme(10, 'knob')}
              onMouseDown={this.handleMouseDown}
              onTouchStart={this.handleTouchStart}
@@ -255,7 +253,7 @@ class Slider extends Component {
    renderSnaps (theme) {
       if (this.props.snaps) {
         return (
-         <div ref='snaps' {...theme(12, 'snaps')}>
+         <div {...theme(12, 'snaps')}>
            {utils.range(0, (this.props.max - this.props.min) / this.props.step).map(i => {
                return <div key={`span-${i}`} {...theme(13, 'snap')}></div>;
              })}
@@ -273,7 +271,6 @@ class Slider extends Component {
       const ref = isLast ? "input" : "inputFrom";
       return (
           <Input
-            ref={ref}
             {...theme(14, 'input')}
             onFocus={this.handleInputFocus}
             onChange={isLast ? this.handleInputChange : this.handleFromInputChange}
@@ -303,7 +300,6 @@ class Slider extends Component {
       >
         {this.isRangeSlider() ? this.renderInput(false, theme) : null}
         <div
-          ref='slider'
           {...theme(16, 'container')}
           onMouseDown={this.handleMouseDown}
           onTouchStart={this.handleTouchStart}
@@ -312,7 +308,6 @@ class Slider extends Component {
           {this.renderKnob(true, theme)}
           <div {...theme(17, 'progress')}>
             <ProgressBar
-              ref='progressbar'
               {...theme(18, 'innerprogress')}
               max={this.props.max}
               min={this.props.min}
@@ -322,7 +317,7 @@ class Slider extends Component {
               theme={this.props.theme}
             />
             {this.props.snaps
-              ? <div ref='snaps' {...theme(19, 'snaps')}>
+              ? <div {...theme(19, 'snaps')}>
                   {utils.range(0, (this.props.max - this.props.min) / this.props.step).map(i => {
                       return <div key={`span-${i}`} {...theme(20, 'snap')}></div>;
                     })}
@@ -363,7 +358,10 @@ Slider.defaultProps = {
   pinned: false,
   snaps: false,
   step: 0.01,
-  value: 0
+  value: 0,
+  theme: {
+    'root': true
+  }
 };
 
 Slider.styleguide = {

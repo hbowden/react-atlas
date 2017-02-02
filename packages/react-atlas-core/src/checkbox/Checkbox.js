@@ -18,7 +18,7 @@ const Checkbox = ({title, label, disabled, inline, className, ...props}) => {
       title = title ? title : label;
 
       return (
-          <label {...theme(1, ...componentClasses)} title={title}>
+          <label {...theme(1, theme)} title={title}>
               <input {...props} type="checkbox" disabled={disabled} {...theme(2, 'input')} />
               {label && <span {...theme(3, 'label')}>{label}</span>}
           </label>

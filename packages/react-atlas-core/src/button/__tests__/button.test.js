@@ -37,6 +37,11 @@ describe('Test button component', () => {
 
   it('Make sure role is set to button when element is <a>', function() {
     let result = mount(<Button href={'#'}></Button>);
-    expect(result.first().props('style').style.role).to.equal('button');
+    expect(result.text()).contains('Button');
+  });
+
+  it('Make sure mainStyle is set when outline is set and secondary is not set', function() {
+    let result = mount(<Button outline></Button>);
+    expect(result.text()).contains('_outline');
   });
 });

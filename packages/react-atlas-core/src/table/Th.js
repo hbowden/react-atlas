@@ -21,7 +21,10 @@ Th.propTypes = {
 };
 
 Th.defaultProps = {
-  className: ''
+  className: '',
+	theme: {
+		'th': true
+	}
 };
 
 Th.styleguide = {

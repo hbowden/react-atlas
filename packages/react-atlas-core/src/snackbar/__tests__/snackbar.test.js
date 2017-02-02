@@ -11,10 +11,11 @@ function timeout() {
   count++;
 }
 
+const didUpdate = sinon.spy(Snackbar.prototype, 'componentDidUpdate');
+
 describe('Testing Snackbar component', () => {
   it('Make sure the right functions are called for various events', function() {
     let result = mount(<Snackbar></Snackbar>);
-    const didUpdate = sinon.spy(Snackbar.prototype, 'componentDidUpdate');
 
     /* Update some props so we cause the component to rerender. */
     result.setProps({'active': true, 'timeout': 2});
@@ -37,10 +38,9 @@ describe('Testing Snackbar component', () => {
   });
 
   it('Check update handler', function() {
-      const didUpdate = sinon.spy(Snackbar.prototype, 'componentDidUpdate');
-      let result = mount(<Snackbar active={true} timeout={1} onTimeout={timeout}></Snackbar>);
+      let result = mount(<Snackbar active={true} timeout={0} onTimeout={timeout}></Snackbar>);
       result.update();
-      sinon.assert.calledOnce(didUpdate);
+      sinon.assert.calledTwice(didUpdate);
       // expect(count).to.equal(1);
   });
 });

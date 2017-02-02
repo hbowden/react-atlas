@@ -5,7 +5,7 @@ import Radio from '../../radio'
 
 describe('Testing radio component', () => {
   it('Set props should match what was passed in', function() {
-    const result = mount(<Radio label="Checked Radio" value="checkedRadio"></Radio>);
+    const result = mount(<Radio label="Checked Radio" value="checkedRadio" defaultChecked></Radio>);
     // expect(result.props().aspectRatio).to.equal(aspectRatio);
   });
 });
