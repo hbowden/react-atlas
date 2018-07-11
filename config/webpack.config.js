@@ -84,6 +84,7 @@ let config = {
   ]
 };
 
+
 if (process.env.NODE_ENV === "production") {
   config.module.rules.push({
     "test": /\.css$/,
@@ -96,7 +97,7 @@ if (process.env.NODE_ENV === "production") {
             "modules": true,
             "importLoaders": 1,
             "localIdentName": "ra_[name]__[local]",
-            "minimize": true
+            "minimize": false
           }
         },
         {
@@ -110,7 +111,7 @@ if (process.env.NODE_ENV === "production") {
       ]
     })
   });
-  config.plugins.push(new ExtractTextPlugin("atlasThemes.min.css"));
+  config.plugins.push(new ExtractTextPlugin("dontImport.min.css"));
 } else {
   config.module.rules.push({
     "test": /\.css$/,

@@ -13,3 +13,4 @@ packages/react-atlas/src/components/
 atlas.config.js
 *reports/
 *.DS_Store
+lib/dontImport.min.css
